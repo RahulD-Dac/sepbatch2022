@@ -6,7 +6,7 @@ static void mergeSort(int arr[], int s, int e) // s= start ,e= end
         if (s < e) {            
         int mid = s +(e-s)/2;          
         mergeSort(arr, s, mid);       // left part sort      
-        mergeSort(arr, mid + 1, e);   // right side sort
+        mergeSort(arr, mid + 1, e);   // right side sort                                        e
         merge(arr, s, mid, e);   // merge
         }
 
@@ -16,8 +16,8 @@ static void mergeSort(int arr[], int s, int e) // s= start ,e= end
         
         // calculating length
         int len1 = mid - s + 1;          //left side length
-		int len2 = e - mid;               // right side length
-        int L[] = new int[len1]; // creats temp array
+		int len2 = e - mid ;               // right side length
+        int L[] = new int[len1];          // creats temp array
         int R[] = new int[len2];  
         
         for (int i = 0; i <len1 ; i++) {                    // copy value left arr
@@ -36,9 +36,10 @@ static void mergeSort(int arr[], int s, int e) // s= start ,e= end
         while (i < len1 && j < len2) // becoz index must be lower then length
 		
 	    {
-            if (L[i] < R[j]) {
+            if (L[i] < R[j]) 
+			{                                      
                 arr[k] = L[i];
-					i++;// copy lower value int main
+					i++; // copy lower value int main
             } 
 			else {
                 arr[k] = R[j];

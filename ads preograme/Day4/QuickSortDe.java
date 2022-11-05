@@ -9,13 +9,12 @@ static	int partition(int arr[], int low ,int high)
 	   {
 		   while(arr[low] < pivot)
 		   {
-			   low++;
-			   
+			   low++;   			   
 		   }
 		   while(arr[high] > pivot)
 		   {
-			   high--;
-		   }
+			   high--;   
+			   }
 		   
 		   if(low<=high) //true so swap i and j
 		   {
@@ -24,8 +23,7 @@ static	int partition(int arr[], int low ,int high)
 			  arr[high] = temp;
 			  low++;
 			  high--;
-			    // low =high;
-			   // high = temp;    				
+			       				
 		   }
 		   		
 	   }
